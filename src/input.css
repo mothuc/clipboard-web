@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "BaiJamjuree-Regular";
+        font-weight: 400;
+        src: url(./fonts/Bai_Jamjuree/BaiJamjuree-Regular.ttf);
+    }
+    @font-face {
+        font-family: "BaiJamjuree-Bold";
+        font-weight: 700;
+        src: url(./fonts/Bai_Jamjuree/BaiJamjuree-Bold.ttf);
+    }
+    @font-face {
+        font-family: "BaiJamjuree-Light";
+        src: url(./fonts/Bai_Jamjuree/BaiJamjuree-Light.ttf);
+    }
+}
+
+html , body {
+    @apply font-base bg-transparent;
+}
+
+h1 {
+    @apply text-4xl py-4;
+}
+h3 {
+    @apply text-xl;
+}
+/* Download component */
+.download-box {
+    @apply text-center py-6 px-4 flex flex-col gap-6 items-center;
+}
+
+.download-title {
+    @apply text-4xl font-bold;
+}
+.btn--primary {
+    @apply bg-cyan-600 text-white rounded-full float-left w-full max-w-sm md:px-6 md:w-auto py-2 border-b-cyan-600 border-b-2 hover:bg-cyan-500; 
+}
+
+.btn--secondary {
+    @apply bg-violet-600 text-white rounded-full float-left w-full max-w-sm  md:px-6 md:w-auto py-2 border-violet-600 border-b-2 hover:bg-violet-500;
+}
+
+
+/* Function component */
+.func-items {
+    @apply text-center flex flex-col items-center justify-center md:text-left md:items-start ;
+}
+
+.func-items .func-item {
+    @apply max-w-sm w-auto py-4;
+}
+
+.func-item .func-title {
+    @apply font-bold py-2;
+}
+/* Tool */
+.tool-item {
+    @apply flex flex-col items-center justify-start text-center gap-4 py-4 max-w-xs min-h-[200px];
+}
+
+.tool-item > h3 {
+    @apply font-bold;
+}
+
+/* hover */
+.link--hover {
+    @apply text-cyan-500;
+}
+
+.footer-link li:hover {
+    @apply text-cyan-500 cursor-pointer;
+}
+
+.footer-social a:hover{
+    @apply text-cyan-500;
+}
